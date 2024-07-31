@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi Daftar Napi Lapas Kelas I Makassar</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <!-- Custom Style -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Favicon icon -->
+    <link rel="shortcut icon" href="../../img/favicon.jpeg" type="image/x-icon">
+</head>
+<body>
+    <div id="screen1">
+    <div class="header">
+        <img src="../../img/logo.jpg" alt="Logo">
+        LAYANAN INFORMASI TRANSPARANSI INTEGRASI (LITERASI)
+    </div>
+    <main>
+        <h1>-- Daftar Narapidana Pengajuan Integrasi --</h1>
+        <div class="table-container red">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 3%;">No</th>
+                        <th style="width: 32%;">Nama Narapidana</th>
+                        <th style="width: 20%;">Perkara</th>
+                        <th style="width: 20%;">Pidana</th>
+                        <th style="width: 24%;">Keterangan</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="scroll-container">
+                <div class="scroll-content">
+                    <table>
+                        <tbody id="list-pengajuan-integrasi">
+                            <tr>
+                                <td style="width: 3%;">-</td>
+                                <td style="width: 32%;">-</td>
+                                <td style="width: 20%;">-</td>
+                                <td style="width: 20%;">-</td>
+                                <td style="width: 24%;">-</td>
+                            </tr>
+  
+                            <!-- Tambahkan lebih banyak data -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <h1>-- Daftar Narapidana Proses Integrasi --</h1>
+        <div class="table-container yellow">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 3%;">No</th>
+                        <th style="width: 62%;">Nama Narapidana</th>
+                        <th style="width: 35%;">Keterangan</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="scroll-container">
+                <div class="scroll-content">
+                    <table>
+                        <tbody id="list-proses-integrasi">
+                            <tr>
+                                <td style="width: 3%;">-</td>
+                                <td style="width: 62%;">-</td>
+                                <td >-</td>
+                            </tr>
+    
+                            <!-- Tambahkan lebih banyak data -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <h1>-- Daftar Narapidana yang Akan Bebas Integrasi --</h1>
+        <div class="table-container green third-table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 3%;">No</th>
+                        <th style="width: 52%;">Nama Narapidana</th>
+                        <th style="width: 25%;">Tanggal Bebas</th>
+                        <th style="width: 20%;">Keterangan</th>
+                    </tr>
+                </thead>
+            </table>
+            <div class="scroll-container">
+                <div class="scroll-content">
+                    <table>
+                        <tbody id="list-napi-bebas">
+                            <tr>
+                                <td style="width: 3%;">-</td>
+                                <td style="width: 52%;">-</td>
+                                <td style="width: 25%;">-</td>
+                                <td style="width: 20%;">-</td>
+                            </tr>
+                   
+                            <!-- Tambahkan lebih banyak data -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer style="left: 0;right: 0;bottom: 0;">
+        <div class="container-fluid">
+          <div class="copyright text-center mb-2 mb-md-0">
+            &copy; 2024 - <a target="_blank" class="text-danger text-decoration-none">FIKOM UMI</a>. All rights reserved.
+          </div>
+        </div>
+      </footer>
+</div>
+<div id="screen2" class="hidden">
+    <div class="header">
+        <img src="../../img/logo.jpg" alt="Logo">
+        LAYANAN INFORMASI TRANSPARANSI INTEGRASI (LITERASI)
+    </div>
+    <main class="d-flex flex-row">
+        <div class="col-md-6 p-2 d-flex flex-column">
+            <div class="flex-grow-1 m-2">
+                <div class="border border-secondary rounded p-2">
+                    <video controls autoplay loop width="100%" muted>
+                        <source src="../../video/video.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+            <div class="clock" id="clock">00:00:00</div>
+            <div id="tanggal" class="clock"></div> <!-- Elemen untuk menampilkan tanggal -->
+        </div>
+        <div class="col-md-6 p-1 d-flex flex-column document-requirements" style="border: 1px solid #00aa9d; border-radius: 10px; padding: 10px; background-color: #f9f9f9; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <h5 class="document-title" style="color: #00aa9d; border-bottom: 2px solid #00aa9d; padding-bottom: 3px; margin-bottom: 10px; text-transform: uppercase;">Syarat Memasukkan Jaminan</h5>
+            <ul style="list-style-type: none; padding-left: 0; font-size: 0.9em;">
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-id-card" style="color: #00aa9d; margin-right: 5px;"></i> Foto Copy KTP Penjamin
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-address-card" style="color: #00aa9d; margin-right: 5px;"></i> Foto Copy KK Penjamin
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-phone" style="color: #00aa9d; margin-right: 5px;"></i> Nomor Telepon Penjamin
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-users" style="color: #00aa9d; margin-right: 5px;"></i> Hubungan Penjamin
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-stamp" style="color: #00aa9d; margin-right: 5px;"></i> Materai 10 Ribu 4 Lembar
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-folder" style="color: #00aa9d; margin-right: 5px;"></i> Map Kertas 1 Lembar 
+                    (<span class="text-danger">Merah</span>/Tipikor) 
+                    (<span class="text-primary">Biru</span>/Umum) 
+                    (<span class="text-warning">Kuning</span>/Narkotika)
+                </li>
+            </ul>
+            <h5 class="document-title" style="color: #00aa9d; border-bottom: 2px solid #00aa9d; padding-bottom: 3px; margin-top: 15px; margin-bottom: 10px; text-transform: uppercase;">Syarat Pembebasan Bersyarat</h5>
+            <ul style="list-style-type: none; padding-left: 0; font-size: 0.9em;">
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-check-circle" style="color: #00aa9d; margin-right: 5px;"></i> Berkelakuan Baik
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-chalkboard-teacher" style="color: #00aa9d; margin-right: 5px;"></i> Aktif Mengikuti Program Pembinaan
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-chart-line" style="color: #00aa9d; margin-right: 5px;"></i> Telah Menunjukkan Penurunan Tingkat Risiko
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-hourglass-half" style="color: #00aa9d; margin-right: 5px;"></i> Telah Menjalani Masa Pidana Paling Singkat 2/3 dengan Ketentuan 2/3 Masa Pidana Tersebut Minimal 9 Bulan
+                </li>
+            </ul>
+            <h5 class="document-title" style="color: #00aa9d; border-bottom: 2px solid #00aa9d; padding-bottom: 3px; margin-top: 15px; margin-bottom: 10px; text-transform: uppercase;">Syarat Cuti Bersyarat</h5>
+            <ul style="list-style-type: none; padding-left: 0; font-size: 0.9em;">
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-calendar-check" style="color: #00aa9d; margin-right: 5px;"></i> Dipidana dengan Pidana Penjara Paling Lama 1 Tahun 6 Bulan
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-thumbs-up" style="color: #00aa9d; margin-right: 5px;"></i> Telah Menjalani Paling Sedikit 2/3 Masa Pidana
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-certificate" style="color: #00aa9d; margin-right: 5px;"></i> Berkelakuan Baik dalam Kurun Waktu 6 Bulan Terakhir
+                </li>
+                <li style="padding: 5px 0; border-bottom: 1px solid #ddd; display: flex; align-items: center;">
+                    <i class="fas fa-hourglass-half" style="color: #00aa9d; margin-right: 5px;"></i> Cuti Bersyarat bagi Narapidana dan Anak Pidana dapat Diberikan untuk Jangka Waktu Paling Lama 6 Bulan
+                </li>
+            </ul>
+        </div>
+        
+               
+    </main>
+    <footer>
+        <div class="container-fluid">
+            <div class="running-text bg-warning text-dark py-2">
+                <span class="marquee-text">Selamat datang di Lapas Kelas 1 Makassar. Mohon untuk mengikuti protokol kesehatan selama berada di area lapas.</span>
+            </div><br>
+            <div class="copyright text-center mb-2 mb-md-0">
+                &copy; 2024 - <a target="_blank" class="text-danger text-decoration-none">FIKOM UMI</a>. All rights reserved.
+            </div>
+        </div>
+    </footer>
+</div>
+    <script src="script.js"></script>
+    <script src="FirebaseDisplay.js" type="module"></script>
+</body>
+</html>
